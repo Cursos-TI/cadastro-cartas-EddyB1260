@@ -29,11 +29,13 @@ int main() {
     printf("Insira o Código da carta: \n");
     scanf("%s", &codigo_cidade1);
 
-    printf("Insira o nome da cidade \n");
-    scanf("%s", &nome1);
+    getchar();
 
-    printf("Insira o Estado \n");
-    scanf("%c", &estado1);
+    printf("Insira o nome da cidade: \n");
+    fgets(nome1,150,stdin);
+
+    printf("Insira o Estado: \n");
+    scanf(" %c", &estado1);
 
     printf("carta 2\n");
     printf("Insira população: \n");
@@ -51,11 +53,13 @@ int main() {
     printf("Insira o Código da carta: \n");
     scanf("%s", &codigo_cidade2);
 
+    getchar();
+
     printf("Insira o nome da cidade \n");
-    scanf("%s", &nome2);
+    fgets(nome2, 150, stdin);
 
     printf("Insira o Estado \n");
-    scanf("%c", &estado2);
+    scanf(" %c", &estado2);
     
     // Exibição dos Dados das Cartas:
     printf("------Dados da Carta-------\n");
