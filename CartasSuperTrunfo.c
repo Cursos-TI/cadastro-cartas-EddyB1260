@@ -8,7 +8,7 @@
 int main() {
     //criando variaveis para 2 cartas
     int pop1, pop2, area1, area2, numero_pontos_turisticos1, numero_pontos_turisticos2;
-    float pib1, pib2;
+    float pib1, pib2, pibpercapta1, pibpercapta2, densipop1, densipop2;
     char nome1[150], nome2[150];
     char codigo_cidade1[5], codigo_cidade2[5];
     char estado1, estado2;
@@ -29,6 +29,7 @@ int main() {
     printf("Insira o Código da carta: \n");
     scanf("%s", &codigo_cidade1);
 
+    //Limpando o buffer após o scanf com %s
     getchar();
 
     printf("Insira o nome da cidade: \n");
@@ -37,6 +38,7 @@ int main() {
     printf("Insira o Estado: \n");
     scanf(" %c", &estado1);
 
+    //Carta dois
     printf("carta 2\n");
     printf("Insira população: \n");
     scanf("%d", &pop2);
@@ -60,22 +62,31 @@ int main() {
 
     printf("Insira o Estado \n");
     scanf(" %c", &estado2);
+    // Calculando Variáveis
+    densipop1 = (float) pop1/area1;
+    densipop2 = (float) pop2/area2;
+    pibpercapta1 = pib1/pop1;
+    pibpercapta2 = pib2/pop2;
     
     // Exibição dos Dados das Cartas:
     printf("------Dados da Carta-------\n");
-    printf("O nome é %s \n", nome1);
+    printf("O nome da cidade é  %s \n", nome1);
     printf("O numero de pontos turisticos é %d \n", numero_pontos_turisticos1);
     printf("O PIB é %.2f \n", pib1);
     printf("A area é %d \n", area1);
     printf("A população é %d \n", pop1);
+    printf("O Pib per capta é %.2f \n",pibpercapta1);
+    printf("A densidade populacional é %.2f \n", densipop1);
     printf("O estado é %c \n", estado1);
 
     printf("------Dados da Carta-------\n");
-    printf("O nome é %s \n", nome2);
+    printf("O nome da cidade é %s \n", nome2);
     printf("O numero de pontos turisticos é %d \n", numero_pontos_turisticos2);
     printf("O PIB é %.2f \n", pib2);
     printf("A area é %d \n", area2);
     printf("A população é %d \n", pop2);
+    printf("O Pib per capta é %.2f \n",pibpercapta2);
+    printf("A densidade populacional é %.2f \n", densipop2);
     printf("O estado é %c \n", estado2);
     return 0;
 }
